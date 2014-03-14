@@ -18,7 +18,7 @@ Ext.define("IAEN.desktop.Desktop",{
 		"IAEN.desktop.FitAllLayout"
 	],
 	
-	id			: "IAEN-desktop",
+	id			: "bleext-desktop",
 	border		: false,
 	layout		: "fitall",
 

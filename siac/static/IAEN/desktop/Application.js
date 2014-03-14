@@ -70,8 +70,9 @@ Ext.define("IAEN.desktop.Application",{
 			me	= this;
 			
 		me.desktop.windowMgr.loader.show();
+		console.log("se ejecuto el run appliction");
 		IAEN.Ajax.request({
-			url		: IAEN.BASE_PATH+"index.php/catalogs/permissions/getForCurrentUserApplication",
+			url		: "http://demos.bleext.com/desktop/index.php/catalogs/permissions/getForCurrentUserApplication",
 			scope	: me,
 			app 	: app,
 			params	: {

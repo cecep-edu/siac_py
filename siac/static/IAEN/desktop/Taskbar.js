@@ -27,14 +27,14 @@ Ext.define("IAEN.desktop.Taskbar",{
 		var me = this,
 			sppliter = {
 				xtype	: "splitter", html: "&#160;",
-				height	: 14, width: 2, // TODO - there should be a CSS way here
+				height	: 14, width: 2, // TODO - there should be a CSS way here , agrandas esto y se ve lo iconos.
 				cls		: "x-toolbar-separator x-toolbar-separator-horizontal IAEN-toolbar-splitter"
             };
 
 		me.startMenu = Ext.create("IAEN.desktop.StartMenu",{
 			applications	: me.applications,
 			user			: me.user,
-			position		: me.dock
+			position		: me.dock //bottom  me.dock
 		});
 
 		me.startButton = Ext.create("IAEN.desktop.StartButton",{
@@ -65,8 +65,8 @@ Ext.define("IAEN.desktop.Taskbar",{
 			enableOverflow	: true,
 			cls				: "IAEN-toolbar-container",
 			items			: [
-				{overflowText:"Show desktop",tooltip:{ text: "Show desktop", align: 'bl-tl' },iconCls:"IAEN-desktop-icon"},
-				{overflowText:"Settings",tooltip:{ text: "Settings", align: 'bl-tl' },iconCls:"IAEN-settings-icon",handler:function(){IAEN.App.showNotification({message:"Testing this notification! this is just a dommy text!"});}}
+				{overflowText:"Hoja de Vida",tooltip:{ text: "Hoja de Vida", align: 'bl-tl' },iconCls:"IAEN-desktop-icon"},
+				{overflowText:"Configuraciones",tooltip:{ text: "Configuraciones", align: 'bl-tl' },iconCls:"IAEN-settings-icon",handler:function(){IAEN.App.showNotification({message:"Testing this notification! this is just a dommy text!"});}}
 			]
         };
 

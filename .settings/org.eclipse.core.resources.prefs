@@ -1,6 +1,7 @@
 eclipse.preferences.version=1
 encoding//siac/settings.py=utf-8
 encoding//sistema/models.py=utf-8
+encoding//sistema/view/view_cargar_escritorio.py=utf-8
 encoding//sistema/view/view_login.py=utf-8
 encoding//sistema/view/view_personal.py=utf-8
 encoding//utilidades/mensaje.py=utf-8

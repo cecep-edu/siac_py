@@ -11,11 +11,7 @@ Ext.define("IAEN.desktop.StartButton",{
 
 	menuAlign	: "bl-tl",
     clickEvent	: "mousedown",
-	text		: "Start",
+	text		: "Inicio",
 	cls			: "IAEN-start-button",
 	iconCls		: "IAEN-start-button-icon",
-	
-	text		: "Start"
-	
-
 });

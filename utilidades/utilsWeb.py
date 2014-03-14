@@ -7,7 +7,7 @@ from datetime import datetime
 from django.conf import settings
 from django.http import HttpResponse 
 
-import django.utils.simplejson as json
+import json
 import os
 
 

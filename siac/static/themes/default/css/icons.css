@@ -41,31 +41,31 @@
 
 
 /* SYSTEM ICONS 16x16 */
-.bleext-start-button-icon{
-	background:transparent url(../images/startmenu/bleext-logo-small.png) 0 center no-repeat !important;
+.IAEN-start-button-icon{
+	background:transparent url(../images/startmenu/IAEN-logo-small.png) 0 center no-repeat !important;
 }
-.bleext-folder-icon{
+.IAEN-folder-icon{
 	background:transparent url(../images/icons/16/folder.png) 0 0 no-repeat;
 }
-.bleext-desktop-icon{
+.IAEN-desktop-icon{
 	background:transparent url(../images/icons/16/desktop.png) 0 0 no-repeat;
 }
-.bleext-settings-icon{
+.IAEN-settings-icon{
 	background:transparent url(../images/icons/16/System.png) 0 0 no-repeat;
 }
-.bleext-gear-icon{
+.IAEN-gear-icon{
 	background:transparent url(../images/icons/16/gear.png) 0 0 no-repeat;
 }
-.bleext-logout-icon{
+.IAEN-logout-icon{
 	background:transparent url(../images/icons/16/User.png) 0 0 no-repeat;
 }
-.bleext-add-icon-16{
+.IAEN-add-icon-16{
 	background:transparent url(../images/icons/16/add.png) 0 0 no-repeat;
 }
-.bleext-delete-icon-16,.bleext-failure-icon-16{
+.IAEN-delete-icon-16,.IAEN-failure-icon-16{
 	background:transparent url(../images/icons/16/delete.png) 0 0 no-repeat;
 }
-.bleext-success-icon-16{
+.IAEN-success-icon-16{
 	background:transparent url(../images/icons/16/accept.png) 0 0 no-repeat;
 }
 

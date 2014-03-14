@@ -13,8 +13,8 @@ Ext.define("IAEN.desktop.Constants",{
 	alternateClassName	: "IAEN.Constants" ,
 	singleton	: true,
 
-	/* login url */
-	DESKTOP_CONFIGURATION_URL	: IAEN.BASE_PATH+"index/desktop/config",
+	/* login url sistema/cargar_escritorio/ */
+	DESKTOP_CONFIGURATION_URL	: "sistema/cargar_escritorio/",
 	DESKTOP_LOGIN_URL			: "sistema/login_user/",
 	DESKTOP_REGISTRAR_URL		: "sistema/registrar_user/",
 	DESKTOP_LOGOUT_URL			: "index",

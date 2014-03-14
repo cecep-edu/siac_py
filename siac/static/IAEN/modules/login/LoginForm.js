@@ -218,9 +218,8 @@ Ext.define("IAEN.modules.login.LoginForm",{
 		if(data.success){
 			if(this.forward){
 				//envia al escritorio online
-				//document.location = IAEN.desktop.Constants.DESKTOP_HOME_URL;
-				Ext.Msg.alert("IAEN informa:",data.message);
-				
+				document.location = IAEN.desktop.Constants.DESKTOP_HOME_URL;
+				//Ext.Msg.alert("IAEN informa:",data.message);
 			}else{
 				var win = this.up("window");
 				if(win){
