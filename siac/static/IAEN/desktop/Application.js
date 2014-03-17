@@ -68,13 +68,12 @@ Ext.define("IAEN.desktop.Application",{
 	runApplication	: function(item) {
 		var app = item.initialConfig,
 			me	= this;
-			
+		
 		me.desktop.windowMgr.loader.show();
-		console.log("se ejecuto el run appliction");
 		IAEN.Ajax.request({
-			url		: "http://demos.bleext.com/desktop/index.php/catalogs/permissions/getForCurrentUserApplication",
+			url		: "sistema/configuracion_user/",
 			scope	: me,
-			app 	: app,
+			app		: app,
 			params	: {
 				application_k : app.application_k
 			},

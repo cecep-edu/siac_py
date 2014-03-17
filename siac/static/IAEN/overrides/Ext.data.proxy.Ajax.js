@@ -20,6 +20,7 @@ Ext.override(Ext.data.proxy.Ajax,{
         
         //Ext.Ajax.request(request);
 		IAEN.Ajax.request(request);
+        
         return request;
     }
 

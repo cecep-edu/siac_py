@@ -28,7 +28,7 @@ Ext.define("IAEN.desktop.Window",{
 		var me = this;
 
 		this.statusBar = Ext.create("Ext.ux.statusbar.StatusBar", {
-			dock		: "bottom",//bottom
+			dock		: "bottom",
 			defaultText	: "Ready"
 		});
 		

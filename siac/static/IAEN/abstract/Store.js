@@ -19,7 +19,7 @@ Ext.define("IAEN.abstract.Store",{
 		Ext.apply(me,options || {});
 		me.proxy = {
 	       type		: "ajax",
-	       url		: me.url,//antes IAEN.BASE_PATH +me.url 
+	       url		:  me.url,
 	       reader	: {
 	           	type			: "json",
 	           	root			: "data",

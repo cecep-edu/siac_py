@@ -14,4 +14,5 @@ Ext.define("IAEN.desktop.StartButton",{
 	text		: "Inicio",
 	cls			: "IAEN-start-button",
 	iconCls		: "IAEN-start-button-icon",
+	text		: "Inicio"
 });

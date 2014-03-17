@@ -9,6 +9,7 @@
 
 Ext.define("IAEN.abstract.Form",{
 	extend 			: "Ext.form.Panel",
+	
 	columns			: 1,
 	border			: false,
 	defaultType		: 'textfield',

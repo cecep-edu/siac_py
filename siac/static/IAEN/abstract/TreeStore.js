@@ -19,7 +19,7 @@ Ext.define("IAEN.abstract.TreeStore",{
 		
         me.proxy = {
 			type	: "ajax",
-			url		: me.url,//antes IAEN.BASE_PATH + "index.html/"+me.url
+			url		: me.url,
 			params	: this.params
 		};
 		

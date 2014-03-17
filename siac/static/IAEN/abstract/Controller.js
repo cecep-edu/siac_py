@@ -2,6 +2,8 @@
  * @class IAEN.abstract.Controller
  * @extends Ext.app.Controller
  * requires 
+ * 
+ * 
  *
  * Basic controller, this class set the handlers to the default buttons in
  * the topbar of each class that extends from IAEN.abstract.Viewport, this class

@@ -15,12 +15,13 @@ def cargar_user_escritorio(request):
                                "description":"Applications catalog",
                                "configurations":"{\"iconCls\":\"applications-icon\",\"width\":800,\"height\":480,\"shorcutIconCls\":\"\"}",
                                "active":"1","iconCls":"applications-icon","leaf":True}],"success":True}
+                               
     json_string = json.dumps(detail)
     #json_string = request.user
     return HttpResponse(json_string)
 
 def configuracion_user(request):
     #return redirect('/')
-    detail={"user":"wilfredo","application_k":1,"success":True,"message":"ok"}
+    detail={"user":"wilfredo","application_k":1,"dock":"bottom","config":{},"success":True,"message":"ok"}
     json_string = json.dumps(detail)
     return HttpResponse(json_string)

@@ -5,6 +5,7 @@
  * Description
  *
  **/
+
 Ext.define("IAEN.modules.login.LoginForm",{
 	extend 			: "IAEN.abstract.Form",
 	alias			: "loginform",

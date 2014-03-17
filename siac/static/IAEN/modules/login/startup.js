@@ -1,4 +1,5 @@
 
+
 Ext.Loader.setConfig({
 	enabled : true,
 	paths   : {
@@ -6,8 +7,7 @@ Ext.Loader.setConfig({
 	} 
 });
 
-
-Ext.require['IAEN.modules.login.LoginForm'];
+Ext.require("IAEN.modules.login.LoginForm");
 
 Ext.onReady(function(){
 	var win = Ext.create("IAEN.modules.login.LoginWindow");

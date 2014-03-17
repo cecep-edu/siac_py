@@ -57,10 +57,10 @@ Ext.define('IAEN.desktop.StartMenu', {
         // TODO - relay menu events
 
         me.toolbar = new Ext.toolbar.Toolbar(Ext.apply({
-            dock: 'right',//right
+            dock: 'right',
             cls: 'ux-start-menu-toolbar',
-            vertical: true,//true
-            width: 600
+            vertical: true,
+            width: 100
         //}, me.toolConfig));
 		}, {
             width: 100,
@@ -81,7 +81,7 @@ Ext.define('IAEN.desktop.StartMenu', {
             ]
         }));
 
-        me.toolbar.layout.align = 'stretch';//stretch
+        me.toolbar.layout.align = 'stretch';
         me.addDocked(me.toolbar);
 
         delete me.toolItems;

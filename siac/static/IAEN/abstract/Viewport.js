@@ -10,7 +10,6 @@
 
 Ext.define("IAEN.abstract.Viewport",{
 	extend		: "Ext.panel.Panel",
-	
 	layout		: "border",
 	height		: 400,
 	autoScroll	: true,

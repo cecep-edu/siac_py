@@ -18,7 +18,7 @@ Ext.define("IAEN.desktop.Desktop",{
 		"IAEN.desktop.FitAllLayout"
 	],
 	
-	id			: "bleext-desktop",
+	id			: "IAEN-desktop",
 	border		: false,
 	layout		: "fitall",
 
@@ -28,7 +28,7 @@ Ext.define("IAEN.desktop.Desktop",{
 		me.taskbar = Ext.create("IAEN.desktop.Taskbar",me.userConfig);
 		me.dockedItems = [me.taskbar];
 		me.windowMgr = Ext.create("IAEN.desktop.WindowManager",{taskbar:me.taskbar});
-
+	
 		me.shortcuts = Ext.create("IAEN.desktop.Shortcuts",{
 			applications	: me.userConfig.applications
 		});

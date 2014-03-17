@@ -1,8 +1,8 @@
 
 
 if(Ext.isEmpty(IAEN.BASE_PATH)){
-	IAEN.log("Por favor , verifica la ruta de 'IAEN.BASE_PATH' constante!");
-	Ext.Msg.alert("Error!!","Por favor , verifica la ruta de 'IAEN.BASE_PATH' constante!");
+	IAEN.log("Please set a correct value for the 'IAEN.BASE_PATH' constant!");
+	Ext.Msg.alert("Error!!","Please set a correct value for the 'IAEN.BASE_PATH' constant!");
 }
 
 Ext.Loader.setConfig({
@@ -15,7 +15,6 @@ Ext.Loader.setConfig({
 
 Ext.require("IAEN.abstract.MessageBox");
 Ext.require("IAEN.desktop.Application");
-
 
 Ext.onReady(function(){
 

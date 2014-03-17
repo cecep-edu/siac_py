@@ -12,14 +12,13 @@ Ext.define("IAEN.desktop.Taskbar",{
 		"IAEN.desktop.StartMenu",
 		"IAEN.desktop.StartButton"
 	],
-	
 	quickStart		: [],
 	
 	initComponent	: function () {
         var me = this;
 
 		me.items = this.buildItems();
-
+		me.dock='bottom';//agrega debajo el menu : bottom
 		me.callParent();
     },
 
@@ -27,23 +26,23 @@ Ext.define("IAEN.desktop.Taskbar",{
 		var me = this,
 			sppliter = {
 				xtype	: "splitter", html: "&#160;",
-				height	: 14, width: 2, // TODO - there should be a CSS way here , agrandas esto y se ve lo iconos.
-				cls		: "x-toolbar-separator x-toolbar-separator-horizontal IAEN-toolbar-splitter"
+				height	: 20, width: 20, // TODO - there should be a CSS way here he:14
+				cls		: "x-toolbar-separator x-toolbar-separator-horizontal IAEN-toolbar-splitter",
             };
 
 		me.startMenu = Ext.create("IAEN.desktop.StartMenu",{
 			applications	: me.applications,
 			user			: me.user,
-			position		: me.dock //bottom  me.dock
+			position		: me.dock, //me.dock, bottom
 		});
 
 		me.startButton = Ext.create("IAEN.desktop.StartButton",{
-			menu		: me.startMenu
+			menu		: me.startMenu,
 		});
+		
        
 		me.quickStart = Ext.create("Ext.toolbar.Toolbar",this.getQuickStart());
 		me.windowBar = Ext.create("IAEN.desktop.TaskbarContainer");
-		
 		
 		return [
 			me.startButton,
@@ -61,12 +60,12 @@ Ext.define("IAEN.desktop.Taskbar",{
     getQuickStart	: function () {
 		var me = this, ret = {
 			minWidth		: 20,
-			width			: 60,
+			width			: 60,//60
 			enableOverflow	: true,
 			cls				: "IAEN-toolbar-container",
 			items			: [
 				{overflowText:"Hoja de Vida",tooltip:{ text: "Hoja de Vida", align: 'bl-tl' },iconCls:"IAEN-desktop-icon"},
-				{overflowText:"Configuraciones",tooltip:{ text: "Configuraciones", align: 'bl-tl' },iconCls:"IAEN-settings-icon",handler:function(){IAEN.App.showNotification({message:"Testing this notification! this is just a dommy text!"});}}
+				{overflowText:"Configuraciones",tooltip:{ text: "Configuraciones", align: 'bl-tl' },iconCls:"IAEN-settings-icon",handler:function(){IAEN.App.showNotification({message:"Probando la web escritorio.!"});}}
 			]
         };
 
@@ -82,7 +81,6 @@ Ext.define("IAEN.desktop.Taskbar",{
 
         return ret;
     },
-
 	addTaskButton	: function(win) {
         var config = {
 			cls			: "IAEN-toolbar-button",

@@ -28,7 +28,6 @@ Ext.define("IAEN.core.Ajax",{
 	
 	request : function(options) {
 	        options = options || {};
-	        
 	        options.headers = {'X-CSRFToken': Ext.util.Cookies.get('csrftoken')};//agrega un token a cada llamado de ajax.
 	        var me = this,
 	            scope = options.scope || window,
@@ -160,8 +159,7 @@ Ext.define("IAEN.core.Ajax",{
 		try{
 			data = Ext.decode(response.responseText);
 		}catch(e){
-			//response.statusText = "Respuesta del servidor desconocida, por favor intenta de nuevo.";
-			response.statusText =response.responseText.message;
+			response.statusText = "Unknow server response, please try again.";
 		}
 		
 		if(data && data.message){	
@@ -172,20 +170,20 @@ Ext.define("IAEN.core.Ajax",{
 			data = {success:false,message:response.statusText};
 			switch(response.status){
 				case 0	: 	//timeout
-							data.message = "hubo un error, por favor intente de nuevo.";
+							data.message = "There was an error, please try it again later.";
 							break;
 				case 404: 	//not foud
-							data.message = "Recurso no encontrado, por favor reporte este problema al administrador.";
+							data.message = "Resource not found, please resport this issue to the administrator.";
 							break;
 				case 403: 	//session expired
-							data.message = "Sesión expiró, por favor  ingrese de nuevo.";
+							data.message = "Session expired, please login again.";
 							this.fireEvent("sessionexpired",data); //show login form here!!
 							break;
 				case 401: 	//access denied
-							data.message = "Acceso denegado,usted no tiene privilegios a este recurso.";
+							data.message = "Access denied, you don't have the rights to get this resource.";
 							break;
 				case 500: 	//system error
-							data.message = "Un error inesperado ha sucedio en la petición, por favor intenta de nuevo más tarde.";
+							data.message = "An error ocurred in this request, please try again later";
 							break;
 				default	:
 							data.message = response.statusText;
@@ -197,7 +195,7 @@ Ext.define("IAEN.core.Ajax",{
 		
 		if(options.statusBar){
 			options.statusBar.setStatus({
-				text	: data.message || "Hubo un error.",
+				text	: data.message || "There was an error",
 				iconCls	: 'x-status-error'
 			});
 		}

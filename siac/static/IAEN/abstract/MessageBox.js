@@ -1,6 +1,7 @@
 /**
  * @class IAEN.abstract.MessageBox
  * @extends Ext.Msg
+ *
  * Description
  *
  *
