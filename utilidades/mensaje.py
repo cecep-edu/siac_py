@@ -10,11 +10,20 @@ def correo_institucion():
 def crear(clase):
     return "%s : Se creo satisfactoriamente."%(clase)
 
+def errorCrear(clase):
+    return "%s : No se pudo crear."%(clase)
+
 def actualziar(clase):
     return "%s : Se actualizo correctamente."%(clase)
 
+def errorActualizar(clase):
+    return "%s : No se pudo actualizar."%(clase)
+
 def eliminar(clase):
     return "%s : Se elimino correctamente."%(clase)
+
+def errorEliminar(clase):
+    return "%s : No se pudo eliminar."%(clase)
 
 def listar(clase):
     return "%s : Se listarón correctamente todos los items."%(clase)

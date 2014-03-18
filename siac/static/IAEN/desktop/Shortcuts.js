@@ -10,14 +10,12 @@
 
 Ext.define("IAEN.desktop.Shortcuts",{
 	extend		: "Ext.view.View",
-	
-	
 	cls			: "IAEN-shortcuts-view",
 	overItemCls	: "IAEN-shortcut-over",
     trackOver	: true,
     itemSelector: "div.IAEN-shortcut",
 	config		: {
-		iconWidth	: 48
+		iconWidth	: 48 //48,
 	},
 
 	/**
@@ -29,10 +27,10 @@ Ext.define("IAEN.desktop.Shortcuts",{
 		'<div class="IAEN-shorcuts-container">',
         '<tpl for=".">',
             '<div class="IAEN-shortcut">',
-                '<div class="IAEN-shortcut-icon {iconCls}">',
-                    '<img src="',Ext.BLANK_IMAGE_URL,'" title="{text}">',
+                '<div class="IAEN-shortcut-icon {iconCls}">',//roles-app-shorcut-icon {iconCls}
+                    '<img src="'+Ext.BLANK_IMAGE_URL+'" title="{text}">', //"',Ext.BLANK_IMAGE_URL,'" {text}
                 '</div>',
-                '<span class="IAEN-shortcut-text">{text}</span>',
+                '<span class="IAEN-shortcut-text">{text}</span>',//{text}
             '</div>',
         '</tpl>',
         '</div>'
@@ -48,21 +46,26 @@ Ext.define("IAEN.desktop.Shortcuts",{
         me.tpl = new Ext.XTemplate(me.shortcutTpl);
 
 		me.initConfig(arguments);
+		console.log("argumetns shorctus wilf ");
 		me.callParent();
 		
 		me.on("resize",me.refreshView,me);
+		
 	},
 	
 	getShorcuts	: function(applications){
 		if(applications){
 			Ext.each(applications,function(app){
+				
 				if(app.menu){
 					this.getShorcuts(app.menu);
 				}else{
 					if(app.configurations){
 						var config = Ext.decode(app.configurations);
+						
 						if(config && config.shorcutIconCls){
 							app.iconCls = config.shorcutIconCls;
+							console.log("wilfin final-> "+app.iconCls);
 							this.store.add(app);
 						}
 					}
@@ -91,6 +94,6 @@ Ext.define("IAEN.desktop.Shortcuts",{
 		}	
 			
 
-		return itemsPerColumn > 0?Math.ceil(total/itemsPerColumn):itemsPerColumn;	
+		return itemsPerColumn > 0 ? Math.ceil(total/itemsPerColumn):itemsPerColumn;	
 	}
 });

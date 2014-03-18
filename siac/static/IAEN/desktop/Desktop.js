@@ -32,9 +32,13 @@ Ext.define("IAEN.desktop.Desktop",{
 		me.shortcuts = Ext.create("IAEN.desktop.Shortcuts",{
 			applications	: me.userConfig.applications
 		});
+		
+		
+		
 		me.wallpaper = Ext.create("IAEN.desktop.Wallpaper",{
 			wallpaper	: IAEN.BASE_PATH+me.userConfig.config.wallpaper
 		});
+		
 		me.windowMenu = new Ext.menu.Menu(me.createWindowMenu());
 
 		me.items = [

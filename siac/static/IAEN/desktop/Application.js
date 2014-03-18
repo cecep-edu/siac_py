@@ -39,14 +39,16 @@ Ext.define("IAEN.desktop.Application",{
 		});
 
 	},
-	
+	//aquí entra el array de json para formar el usuario
 	buildDesktop	: function(data){
 		var me = this;
-
+		console.log("wilfo aqui inicio");
+		console.log(data);
+		console.log("wilfo aqui final");
         if (me.useQuickTips) {
             Ext.QuickTips.init();
         }
-
+        //pasamos la configuración iniical de los módulos a la variable me.userConfig
 		me.userConfig = data;
 
 		me.desktop = new IAEN.desktop.Desktop({userConfig:me.userConfig});
@@ -98,7 +100,7 @@ Ext.define("IAEN.desktop.Application",{
 				appname = arr[0];
 
 			cfg = Ext.decode(app.configurations);
-			
+			//ruta del archivo donde esta el controlador
 			Ext.Loader.setPath(appname,IAEN.desktop.Constants.JS_PATH+appname);
 			Ext.Loader.require(app.klass,function(){
 				var controller,

@@ -30,7 +30,7 @@ Ext.define('IAEN.desktop.StartMenu', {
     // This is combined with changing the align property of the menu's layout from the
     // typical 'stretchmax' to 'stretch' which allows the the items to fill the menu
     // area.
-    width	: 300,
+    width	: 350,
 	height	: 300,
 
     initComponent: function() {
@@ -63,17 +63,17 @@ Ext.define('IAEN.desktop.StartMenu', {
             width: 100
         //}, me.toolConfig));
 		}, {
-            width: 100,
+            width: 150,
             items: [
                 {
-                    text	:'Settings',
+                    text	:'Configuraciones',
                     iconCls	:'IAEN-settings-icon',
                     handler	: me.onSettings,
                     scope	: me
                 },
                 '-',
                 {
-                    text	:'Logout',
+                    text	:'Salir del Sistema',
                     iconCls	:'IAEN-logout-icon',
                     handler	: me.onLogout,
                     scope	: me
@@ -157,7 +157,7 @@ Ext.define('IAEN.desktop.StartMenu', {
 	},
 	
 	onLogout	: function(){
-		Ext.Msg.confirm("Confirm","Are you sure you want to logout?",function(btn){
+		Ext.Msg.confirm("Confirm","¿¿Estas seguro que desea salir del sistema?",function(btn){
 			if(btn === "yes"){
 				document.location = IAEN.Constants.DESKTOP_LOGOUT_URL;
 			}

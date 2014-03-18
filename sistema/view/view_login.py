@@ -15,6 +15,7 @@ from django.http.response import HttpResponse
 from django.shortcuts import redirect
 
 
+
 def login_user(request):
         username=request.POST['username']
         password=request.POST['password']
