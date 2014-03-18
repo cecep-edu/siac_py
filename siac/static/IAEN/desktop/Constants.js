@@ -16,7 +16,7 @@ Ext.define("IAEN.desktop.Constants",{
 	DESKTOP_CONFIGURATION_URL	: "sistema/cargar_escritorio/",
 	DESKTOP_LOGIN_URL			: "sistema/login_user/",
 	DESKTOP_REGISTRAR_URL		: "sistema/registrar_user/",
-	DESKTOP_LOGOUT_URL			: "index",
+	DESKTOP_LOGOUT_URL			: "sistema/logout_user/",
 	DESKTOP_HOME_URL			: "home",
 	
 	/* The directory where the avatars are */

@@ -12,6 +12,8 @@ from django.core.mail import send_mail
 from utilidades import mensaje
 from base64 import encodestring, decodestring
 from django.http.response import HttpResponse
+from django.shortcuts import redirect
+
 
 def login_user(request):
         username=request.POST['username']
@@ -35,6 +37,7 @@ def activar_cuenta(request):
     
 def logout_user(request):
     logout(request)
+    return redirect('/')
 
 def registrar_user(request):
     if request.method !='POST':

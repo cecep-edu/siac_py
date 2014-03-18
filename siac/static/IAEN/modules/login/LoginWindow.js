@@ -14,6 +14,7 @@ Ext.define("IAEN.modules.login.LoginWindow",{
 	layout			: "auto",
 	modal			: false,
 	width			: 420,
+	minHeight		: 300,
 	autoHeight      : true,
 	closable		: false,
 	
